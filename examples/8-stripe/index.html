@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stripe Payment</title>
+    <!-- global css -->
+    <link rel="stylesheet" href="../../global.css" />
+    <!-- local css -->
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- STRIPE STUFF -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="nav">
+      <div class="nav-header">
+        <img src="../../assets/logo.svg" alt="logo" />
+        <a href="../../index.html">Home</a>
+      </div>
+    </nav>
+    <!-- content -->
+    <section class="section section-center">
+      <h1>Stripe payment</h1>
+      <h3>4242 4242 4242 4242</h3>
+      <form id="payment-form">
+        <div id="payment-element">
+          <!--Stripe.js injects the Payment Element-->
+        </div>
+        <button id="submit">
+          <div class="spinner hidden" id="spinner"></div>
+          <span id="button-text">Pay now</span>
+        </button>
+        <div id="payment-message" class="hidden"></div>
+      </form>
+    </section>
+    <!-- js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
